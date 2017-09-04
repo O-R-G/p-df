@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>P!DF.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>ZoomingPDFViewer.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>930004031F3A453D00A9F9C9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>935A95F11F3CFA67009B8FBF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>938523E81F539DEC0044237D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C4C9E03017949AAE00F56C1C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

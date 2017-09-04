@@ -1,0 +1,36 @@
++ change background to black
++ change borders to black
++ allow scaling in landscape view'
++ rename target, P!DF
++ add iconset
+x scrolling thru pages by moving finger across screen?
+x speed scroll thru pdf by touch and hold?
+x press and hold to flip fast
++ no zooming down
++ zoom in smoother? No tiling
++ format 16:9 — try /it
++ fix center view pdf / 2-page view
++ sound fx
+  https://www.soundjay.com/page-flip-sounds-1.html
+  http://codewithchris.com/avaudioplayer-tutorial/
++ startupsound
++ xcodebuild test (iphone)
++ startup screen, sound
++ replaced iconset
++ splash page orientation and background
++ links in PDF work
++ AVAudioPlayerObject debug (where to put _audioPlayerFX play)
++ openURL update
++ enforce no scroll (in UIScrollView) 
++ recover from zooming and still do page flip
++ force horizontal orientation on startup
++ links open in browser (force vertical)
++ launch screen stays on longer (1 second)
++ clean up unneeded classes
+- git init, push to github
+- archive
+
+** submit **
+
+- nsurl for pdf to load most recent version / cache
+— back button
