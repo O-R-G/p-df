@@ -125,7 +125,7 @@
         // First entry in the array is the page the links points to.
         CGPDFDictionaryRef pageDictionaryFromDestArray = NULL;
         if (CGPDFArrayGetDictionary(destArray, 0, &pageDictionaryFromDestArray)) {
-            int documentPageCount = CGPDFDocumentGetNumberOfPages(document);
+            NSUInteger documentPageCount = CGPDFDocumentGetNumberOfPages(document);
             for (int i = 1; i <= documentPageCount; i++) {
                 CGPDFPageRef page = CGPDFDocumentGetPage(document, i);
                 CGPDFDictionaryRef pageDictionaryFromPage = CGPDFPageGetDictionary(page);
@@ -139,7 +139,7 @@
             // instead of a reference to the actual page.
             CGPDFInteger pageNumber = 0;
             if (CGPDFArrayGetInteger(destArray, 0, &pageNumber)) {
-                targetPageNumber = pageNumber + 1;
+                targetPageNumber = (int)pageNumber + 1;
             }
         }
         
@@ -172,7 +172,7 @@
     
     CGPDFArrayRef namesArray = NULL;
     if (CGPDFDictionaryGetArray(node, "Names", &namesArray)) {
-        int namesCount = CGPDFArrayGetCount(namesArray);
+        NSUInteger namesCount = CGPDFArrayGetCount(namesArray);
         for (int i = 0; i < namesCount; i = i + 2) {
             CGPDFStringRef destName;
             if (CGPDFArrayGetString(namesArray, i, &destName)) {
@@ -193,7 +193,7 @@
     
     CGPDFArrayRef kidsArray = NULL;
     if (CGPDFDictionaryGetArray(node, "Kids", &kidsArray)) {
-        int kidsCount = CGPDFArrayGetCount(kidsArray);
+        NSUInteger kidsCount = CGPDFArrayGetCount(kidsArray);
         for (int i = 0; i < kidsCount; i++) {
             CGPDFDictionaryRef kidNode = NULL;
             if (CGPDFArrayGetDictionary(kidsArray, i, &kidNode)) {

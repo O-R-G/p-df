@@ -16,7 +16,7 @@
 - (void)renderPDFPageInContext: (CGContextRef)context {
 	pageRenderRect = [PDFPageRenderer renderPage: pdfPage inContext: context inRectangle: self.bounds];
     
-    float yellowComponents[4] = { 1.0, 1.0, 0.0, 1.0 };
+    // float yellowComponents[4] = { 1.0, 1.0, 0.0, 1.0 };
     CGColorSpaceRef rgbColorSpace = CGColorSpaceCreateDeviceRGB();
     CGContextSetStrokeColorSpace(context, rgbColorSpace);
     // CGColorRef yellow = CGColorCreate(rgbColorSpace, yellowComponents);
@@ -48,7 +48,7 @@
     // Test if there is a link annotation at the point.
     // The z-order for the links is defined by the link position in the pageLinks array.
     // The last link in the array is the top most.
-    for (int i = [pageLinks count] - 1; i >= 0; i--) {
+    for (int i = (int)[pageLinks count] - 1; i >= 0; i--) {
         PDFLinkAnnotation *link = [pageLinks objectAtIndex: i];
         if ([link hitTest: pdfPosition]) {
             CGPDFDocumentRef document = CGPDFPageGetDocument(pdfPage);
@@ -87,7 +87,7 @@
     // PDF links are link annotations stored in the page's Annots array.
     CGPDFDictionaryGetArray(pageDictionary, "Annots", &annotsArray);
     if (annotsArray != NULL) {
-        int annotsCount = CGPDFArrayGetCount(annotsArray);
+        NSUInteger annotsCount = CGPDFArrayGetCount(annotsArray);
         
         for (int j = 0; j < annotsCount; j++) {
             CGPDFDictionaryRef annotationDictionary = NULL;            

@@ -40,7 +40,7 @@
     NSURL *soundUrl = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"page-flip-03" ofType:@"mp3"]];
     _audioPlayerFX = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl error:nil];
 
-    AVAudioPlayer *_audioPlayerFX;
+    // AVAudioPlayer *_audioPlayerFX;
     // _playAudioFX = FALSE;
 }
 

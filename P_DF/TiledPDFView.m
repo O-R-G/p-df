@@ -77,6 +77,7 @@
 }
 */
 
+#pragma GCC diagnostic ignored "-Wundeclared-selector"
 
 // Create a new TiledPDFView with the desired frame and scale.
 // - (id)initWithFrame:(CGRect)frame{
@@ -95,14 +96,12 @@
         
         pageLinks = [[NSMutableArray alloc] init];
         
-        UITapGestureRecognizer *singleFingerTap =
-        [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleUserTap:)];
+        UITapGestureRecognizer *singleFingerTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleUserTap:)];
         singleFingerTap.numberOfTapsRequired = 1;
         [self addGestureRecognizer:singleFingerTap];         
     }
     return self;
 }
-
 
 // Set the layer's class to be CATiledLayer.
 + (Class)layerClass {
