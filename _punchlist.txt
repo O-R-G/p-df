@@ -27,10 +27,15 @@ x press and hold to flip fast
 + links open in browser (force vertical)
 + launch screen stays on longer (1 second)
 + clean up unneeded classes
-- git init, push to github
-- archive
++ git init, push to github
++ update link markers
++ archive
++ could not upload through xcode, so used application loader
++ also problems with code signing, so did it manually (still in xcode)
 
 ** submit **
 
+- resolve links precision, and function on scrollview zoom when single 
+taps are disabled by scrollenabled
 - nsurl for pdf to load most recent version / cache
 — back button

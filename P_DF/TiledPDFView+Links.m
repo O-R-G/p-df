@@ -17,11 +17,15 @@
 	pageRenderRect = [PDFPageRenderer renderPage: pdfPage inContext: context inRectangle: self.bounds];
     
     // float yellowComponents[4] = { 1.0, 1.0, 0.0, 1.0 };
-    CGColorSpaceRef rgbColorSpace = CGColorSpaceCreateDeviceRGB();
-    CGContextSetStrokeColorSpace(context, rgbColorSpace);
-    // CGColorRef yellow = CGColorCreate(rgbColorSpace, yellowComponents);
-    // CGContextSetStrokeColorWithColor(context, yellow);
     
+    CGFloat yellowComponents[4] = { 1, 1, 0, 1 };
+    CGColorSpaceRef rgbColorSpace = CGColorSpaceCreateDeviceRGB();
+    // CGContextSetStrokeColorSpace(context, rgbColorSpace);
+    CGContextSetFillColorSpace(context, rgbColorSpace);
+    CGColorRef yellow = CGColorCreate(rgbColorSpace, yellowComponents);
+    // CGContextSetStrokeColorWithColor(context, yellow);
+    CGContextSetFillColorWithColor(context, yellow);
+
     for (int i = 0; i < [pageLinks count]; i++) {
         PDFLinkAnnotation *linkAnnotation = [pageLinks objectAtIndex: i];
         CGPoint pt1 = [self convertPDFPointToViewPoint: linkAnnotation.pdfRectangle.origin];
@@ -32,8 +36,9 @@
         
         CGRect linkRectangle = CGRectMake(pt1.x, pt1.y, pt2.x - pt1.x, pt2.y - pt1.y);
         CGContextAddRect(context, linkRectangle);
-        
-        CGContextStrokePath(context);
+
+        // CGContextStrokePath(context);
+        // CGContextFillPath(context);
     }
     
     // CGColorRelease(yellow);
