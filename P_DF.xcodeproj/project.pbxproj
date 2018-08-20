@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		93065A8A1F4F636300B6564D /* PDFLinkAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 93065A851F4F636300B6564D /* PDFLinkAnnotation.m */; };
-		93065A8B1F4F636300B6564D /* PDFView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93065A871F4F636300B6564D /* PDFView.m */; };
 		93065A8C1F4F636300B6564D /* TiledPDFView+Links.m in Sources */ = {isa = PBXBuildFile; fileRef = 93065A891F4F636300B6564D /* TiledPDFView+Links.m */; };
 		93065A8F1F4F643700B6564D /* PDFPageRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 93065A8E1F4F643700B6564D /* PDFPageRenderer.m */; };
 		935A95F31F3CFA67009B8FBF /* TiledPDFView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F7336219215B5A009F63EC /* TiledPDFView.m */; };
@@ -55,8 +54,6 @@
 		522ED0EC1E9C51E800A9786B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = P_DF/en.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
 		93065A841F4F636300B6564D /* PDFLinkAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PDFLinkAnnotation.h; path = P_DF/PDFLinkAnnotation.h; sourceTree = SOURCE_ROOT; };
 		93065A851F4F636300B6564D /* PDFLinkAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PDFLinkAnnotation.m; path = P_DF/PDFLinkAnnotation.m; sourceTree = SOURCE_ROOT; };
-		93065A861F4F636300B6564D /* PDFView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PDFView.h; path = P_DF/PDFView.h; sourceTree = SOURCE_ROOT; };
-		93065A871F4F636300B6564D /* PDFView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PDFView.m; path = P_DF/PDFView.m; sourceTree = SOURCE_ROOT; };
 		93065A881F4F636300B6564D /* TiledPDFView+Links.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "TiledPDFView+Links.h"; path = "P_DF/TiledPDFView+Links.h"; sourceTree = SOURCE_ROOT; };
 		93065A891F4F636300B6564D /* TiledPDFView+Links.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "TiledPDFView+Links.m"; path = "P_DF/TiledPDFView+Links.m"; sourceTree = SOURCE_ROOT; };
 		93065A8D1F4F643700B6564D /* PDFPageRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PDFPageRenderer.h; path = P_DF/PDFPageRenderer.h; sourceTree = SOURCE_ROOT; };
@@ -155,8 +152,6 @@
 				C4F7335C19215B5A009F63EC /* TiledPDFScrollView.m */,
 				C4F7336119215B5A009F63EC /* TiledPDFView.h */,
 				C4F7336219215B5A009F63EC /* TiledPDFView.m */,
-				93065A861F4F636300B6564D /* PDFView.h */,
-				93065A871F4F636300B6564D /* PDFView.m */,
 				93065A881F4F636300B6564D /* TiledPDFView+Links.h */,
 				93065A891F4F636300B6564D /* TiledPDFView+Links.m */,
 			);
@@ -290,12 +285,12 @@
 		C4C9E02917949AAE00F56C1C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Apple DTS";
 				TargetAttributes = {
 					935A95F11F3CFA67009B8FBF = {
 						DevelopmentTeam = 2T5W462SEL;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 					938523E81F539DEC0044237D = {
 						CreatedOnToolsVersion = 8.3.3;
@@ -362,7 +357,6 @@
 			files = (
 				935A95F31F3CFA67009B8FBF /* TiledPDFView.m in Sources */,
 				93065A8F1F4F643700B6564D /* PDFPageRenderer.m in Sources */,
-				93065A8B1F4F636300B6564D /* PDFView.m in Sources */,
 				93065A8A1F4F636300B6564D /* PDFLinkAnnotation.m in Sources */,
 				935A95F41F3CFA67009B8FBF /* AppDelegate.m in Sources */,
 				935A95F51F3CFA67009B8FBF /* RootViewController.m in Sources */,
@@ -428,7 +422,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2T5W462SEL;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "P_DF/P_DF-Prefix.pch";
@@ -436,8 +431,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.o-r-g.p-df";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "83d06531-a6e4-467e-a40c-e9b870cc249a";
-				PROVISIONING_PROFILE_SPECIFIER = "XC iOS: com.o-r-g.p-df";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -448,7 +443,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2T5W462SEL;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "P_DF/P_DF-Prefix.pch";
@@ -456,8 +452,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.o-r-g.p-df";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "83d06531-a6e4-467e-a40c-e9b870cc249a";
-				PROVISIONING_PROFILE_SPECIFIER = "XC iOS: com.o-r-g.p-df";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -519,12 +515,20 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -562,12 +566,20 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

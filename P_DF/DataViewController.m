@@ -8,7 +8,7 @@ The app's view controller which presents viewable content.
 
 
 #import "DataViewController.h"
-#import "PDFView.h"
+#import <PDFKit/PDFView.h>
 #import "TiledPDFScrollView.h"
 #import "TiledPDFView.h"
 
